@@ -8,15 +8,8 @@ section.posts {
 }
 
 article.post-item {
-  // @extend %content-container;
-  // box-shadow: 0 -0px 0 $shadow-2, inset 0 1px 0 #eaeaea, $base-shadow;
   margin-bottom: 30px;
-  // @include transition(box-shadow 0.15s);
   margin: $base-padding $base-padding $base-padding + 10px;
-
-  &:hover {
-    // box-shadow: 0 -3px 0 $shadow-2, inset 0 0px 0 #eaeaea, $base-shadow;
-  }
 
   h3 {
     font-weight: 800;

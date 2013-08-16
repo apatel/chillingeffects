@@ -96,7 +96,7 @@ header.app {
   nav.main-nav {
     float: right;
     @include clearfix;
-    margin-top: 20px;
+    margin-top: 23px;
   }
 
   ol.nav-list {
@@ -107,6 +107,7 @@ header.app {
     li.nav-item > a {
       color: $nav-link-color;
       font-size: $base-font-size;
+      font-weight: 500;
       padding: 6px 15px;
       text-shadow: none;
 
