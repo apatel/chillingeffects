@@ -50,6 +50,13 @@ header.app {
     }
   }
 
+  h2 {
+    color: white;
+    font-size: em(22, 15);
+    font-weight: 800;
+    margin: 0 0 0 (35px - 12px);
+  }
+
   $input-height: 42px;
   .container .search-wrapper {
     position: relative;
@@ -141,13 +148,14 @@ header.app {
 //************************************************************************//
 // Advanced Search
 //************************************************************************//
-.container.advanced-search {
-  background: #fff;
+header.app .container.advanced-search {
   border-radius: 0;
+  color: #fff;
   display: none;
   font-size: $base-font-size-small-1;
   margin: 0;
   text-align: left;
+  padding: 12px $base-padding 24px $base-padding;
 
   h5 {
     font-size: $base-font-size-small-1;
@@ -224,13 +232,12 @@ header.app {
     }
 
     select {
-      @extend %gray-gradient;
       @include appearance(none);
       @include linear-gradient(#FAFAFA, #E9E9E9);
       font-weight: 600;
-      border: 1px solid $base-border-color-2;
+      border: 0;
+      border-right: 1px solid hsla(0, 0%, 0%, 0.2);
       border-radius: 2px 0 0 2px;
-      border-right: 0;
       font-size: $base-font-size-small-1 - 1;
       height: $input-height;
       margin-bottom: 0;
@@ -245,11 +252,12 @@ header.app {
   }
 
   input {
-    font-size: $base-font-size-small-1;
-    padding: 5px 10px;
-    height: $input-height;
+    border: 0;
     @include border-left-radius(0);
+    font-size: $base-font-size-small-1;
+    height: $input-height;
     margin: 0;
+    padding: 5px 10px;
     width: $input-width;
 
     @include media($mobile) {
@@ -258,11 +266,12 @@ header.app {
   }
 
   a.add-group {
-    font-weight: 600;
+    color: #fff;
     display: inline-block;
-    margin-top: 5px;
     float: left;
+    font-weight: 600;
     margin-left: 15px;
+    margin-top: 5px;
 
     @include media($mobile) {
       clear: left;

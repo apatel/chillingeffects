@@ -9,6 +9,14 @@ body {
 .main-inner, .header-inner {
   @include container;
   margin: 0 auto;
+
+  @include media($small-screen) {
+    margin: 0 $base-padding;
+  }
+
+  @include media($mobile) {
+    margin: 0 10px;
+  }
 }
 
 .header-inner {
@@ -20,10 +28,12 @@ body {
   border-radius: 0 0 4px 4px;
   margin-bottom: 40px;
 
-  @include media($small-screen) {
-    padding: 40px $gutter;
-  }
-  @include media($mobile) {
-    padding: 40px 10px;
+}
+
+// Add inner padding to certain pages
+body.categories-show,
+body.high_voltage-pages {
+  .main-inner {
+    padding: $base-padding;
   }
 }
