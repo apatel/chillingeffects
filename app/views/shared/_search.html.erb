@@ -1,7 +1,7 @@
 <div class="search-wrapper">
   <%= form_tag(notices_search_index_path, method: :get) do %>
     <div class="input">
-      <%= text_field_tag :term, params[:term], id: "search", type: 'search', placeholder: "Search C&D notices…" %>
+      <%= text_field_tag :term, params[:term], id: "search", type: 'search', placeholder: "Search all notices…" %>
     </div>
     <div class="submit">
       <button id="submit" class="" type="submit" title="search"></button>

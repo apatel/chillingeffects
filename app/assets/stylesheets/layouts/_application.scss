@@ -1,14 +1,24 @@
 body {
-  background: #fff;
-}
-
-section.main {
   background: $base-background-color;
 }
 
-.main-inner {
+.main.app {
+  // padding-top: 30px;
+}
+
+.main-inner, .header-inner {
   @include container;
-  padding: 40px $gutter 40px 210px;
+  margin: 0 auto;
+}
+
+.header-inner {
+  padding-top: 20px;
+}
+
+.main-inner {
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+  margin-bottom: 40px;
 
   @include media($small-screen) {
     padding: 40px $gutter;

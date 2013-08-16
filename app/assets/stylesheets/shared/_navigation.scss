@@ -2,10 +2,6 @@
 // Main Navigation Shared
 //************************************************************************//
 nav.main-nav {
-  background: $nav-bg;
-  border-bottom: 1px solid darken($nav-bg, 15%);
-  clear: left;
-
   .nav-item {
     float: left;
     list-style: none;
@@ -40,7 +36,7 @@ nav.main-nav {
   #dropdown-categories {
     @include media($small-screen){
       background: darken($nav-bg, 4%);
-      @include border-top-radius(0);
+      @include border-top-radius(0);;
       left: 0;
       margin-left: 0;
       margin-top: 0;
@@ -72,11 +68,12 @@ nav.main-nav {
 body.home-index {
   nav.main-nav {
     ol.nav-list {
-      max-width: $home-width;
-      margin: 0 auto;
-      border-radius: 0 0 3px 3px;
+      background: $nav-bg;
+      border-bottom: 1px solid darken($nav-bg, 15%);
+      clear: left;
       @include clearfix;
-      margin-top: 0;
+      margin: 0 auto;
+      max-width: $home-width;
       padding: 0;
       width: 100%;
 
@@ -96,31 +93,25 @@ body.home-index {
 // App Header Navigation - not landing
 //************************************************************************//
 header.app {
-  ol.nav-list {
-    @include container;
-    margin: 0;
-    padding: 0 0 0 $left-margin;
+  nav.main-nav {
+    float: right;
+    @include clearfix;
+    margin-top: 20px;
+  }
 
-    @include media($small-screen) {
-      padding: 0;
-    }
+  ol.nav-list {
+    margin: 0;
+    padding: 0;
+    @include clearfix;
 
     li.nav-item > a {
-      font-size: $base-font-size-small-1;
+      color: $nav-link-color;
+      font-size: $base-font-size;
       padding: 6px 15px;
+      text-shadow: none;
 
       &:focus {
         outline: none;
-      }
-    }
-
-    li.about {
-      float: right;
-      margin-right: $base-padding;
-
-      @include media($small-screen) {
-        float: left;
-        margin: 0;
       }
     }
   }

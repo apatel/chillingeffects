@@ -1,11 +1,12 @@
 article.notice-show {
   h1 {
-    color: $base-title-color;
-    font-size: em(24, 15);
-    font-weight: bold;
+    color: #fff;
+    font-size: em(18, 15);
+    font-weight: 700;
     line-height: 1em;
-    margin-bottom: 0.15em;
-    margin-top: 0;
+    margin: 0;
+    background: #476491;
+    padding: 25px 35px 15px;
   }
 }
 
@@ -13,11 +14,7 @@ article.notice-show {
   section.body {
     position: relative;
     z-index: 1;
-    background: white;
-    border-radius: 3px;
-    box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.25);
     clear: left;
-    margin-top: 2em;
     overflow: hidden;
   }
 }
@@ -26,15 +23,15 @@ article.notice-show {
 //************************************************************************//
 article.notice-show {
   header {
-    @extend %gray-gradient;
-    border-bottom: 1px solid $base-border-color-1;
+    background-color: $header-background-alt-2;
     @include clearfix;
+    color: #fff;
+    font-weight: 500;
 
-    section.sender,
-    section.recipient {
+    section.sender, section.recipient {
       float: left;
       min-height: 150px;
-      @include pad(15px default 25px $base-padding);
+      @include pad(20px default 30px $base-padding);
       width: 50%;
 
       @include media($mobile) {
@@ -46,23 +43,25 @@ article.notice-show {
     }
 
     section.recipient {
-      box-shadow: inset 0 4px 0 #18A753;
+      h5 {
+        color: #9DEEBE;
+      }
     }
 
     section.sender {
-      box-shadow: inset 0 4px 0 #DE5024;
       position: relative;
 
       &:before {
-        background-image: image_url("arrow.svg");
+        background-image: image_url("arrow-dark.svg");
         background-repeat: no-repeat;
         background-size: 26.5%;
         content: "";
         height: 48px;
         left: 82%;
+        opacity: 0.1;
         position: absolute;
         top: 50px;
-        width: 62%;
+        width: 50%;
         z-index: 1;
 
         @include media($mobile) {
@@ -73,20 +72,21 @@ article.notice-show {
 
     h5 {
       text-transform: uppercase;
-      color: darken($light-gray, 15%);
-      font-weight: bold;
+      color: #FC9271;
+      font-weight: 700;
       margin-bottom: 5px;
       font-size: $base-font-size-small-1 - 1;
     }
 
     h6 {
-      font-size: $base-font-size-small-1;
+      font-size: $base-font-size-small-1 + 1;
       font-weight: bold;
 
       a {
-        color: $base-font-color;
+        color: #fff;
 
         &:hover {
+          color: #fff;
           text-decoration: underline;
         }
       }
@@ -95,6 +95,12 @@ article.notice-show {
     span {
       display: block;
       font-size: $base-font-size-small-1;
+      font-weight: 300;
+
+      &.date {
+        color: hsla(0, 0%, 100%, 0.6);
+        margin-top: 8px;
+      }
     }
 
     a {
@@ -318,7 +324,7 @@ section.attachments {
 article.notice-show {
   footer {
     @include clearfix;
-    margin: 0 15px 40px;
+    margin: 0 $base-padding;
     position: relative;
     top: -1px;
     z-index: 0;
@@ -352,7 +358,7 @@ article.notice-show {
 }
 
 aside.notice {
-  margin: 0 15px;
+  margin: 40px $base-padding;
 
   h4.title {
     @extend %header-title;

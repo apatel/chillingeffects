@@ -12,17 +12,8 @@
   }
 }
 
-%hover-effect {
-  background: white;
-  box-shadow: 0 -4px 0 $shadow-4;
-  color: $base-title-color;
-}
-
-
 ol.results-facets {
-  $border-color: #ddd;
-  @extend %gray-gradient;
-  border-bottom: 1px solid $border-color;
+  background: $header-background-alt-1;
   @include clearfix;
   margin: 0;
   padding: 0;
@@ -31,8 +22,7 @@ ol.results-facets {
   > li {
     float: left;
     list-style: none;
-    border-right: 1px solid $border-color;
-    @extend %gray-gradient;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.1);
 
     &:first-child {
       margin: 0 0 0 15px;
@@ -62,12 +52,13 @@ ol.results-facets {
     }
   }
 
+ $padding-y: 12px;
   li.title {
-    padding: 10px 30px 10px 20px;
+    padding: $padding-y 30px $padding-y 20px;
     font-size: $base-font-size-small-2;
     text-transform: uppercase;
     font-weight: 700;
-    color: $base-title-color;
+    color: #fff;
 
     @include media($small-screen) {
       display: none;
@@ -85,7 +76,7 @@ ol.results-facets {
 
     &:hover,
     &.open a.dropdown-toggle {
-      @extend %hover-effect;
+      background: $header-background-alt-2;
 
       @include media($tablet) {
         box-shadow: none;
@@ -95,31 +86,28 @@ ol.results-facets {
 
     &.active {
       a.dropdown-toggle {
-        color: $shadow-4;
+        background: $shadow-4; //purple
       }
     }
 
     a.dropdown-toggle {
-      color: lighten(desaturate($base-title-color, 15%), 15%);
+      color: #fff;
       display: block;
       font-size: $base-font-size-small-1 - 1px;
       font-weight: 600;
-      padding: 10px 24px 10px 10px;
+      padding: $padding-y 24px $padding-y 10px;
       position: relative;
       text-decoration: none;
 
       &:after {
-        @include triangle(8px, darken($base-border-color, 15%), down);
+        // @include triangle(8px, hsla(0, 0%, 0%, 0.4), down);
+        @include triangle(8px, hsla(0, 0%, 100%, 0.6), down);
         position: absolute;
         content: "";
-        right: 10px;
+        right: 8px;
         top: calc(50% - 2px);
       }
     }
-  }
-
-  li.date_received_facet {
-    border: 0;
   }
 
   $button-height: 40px;

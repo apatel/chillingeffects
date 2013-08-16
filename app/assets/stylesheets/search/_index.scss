@@ -1,7 +1,5 @@
 section.search-results {
-  background: #fff;
   border-radius: 3px;
-  box-shadow: 0 -4px 0 $shadow-1, $base-shadow;
   @include clearfix;
 
   div.result-stats {
