@@ -2,7 +2,7 @@
 // Pagination
 //************************************************************************//
 .pagination {
-  background: $header-background-alt-1;
+  background: $header-background-2;
   border-radius: 0 0 4px 4px;
   @include clearfix;
   overflow: hidden;
@@ -20,7 +20,7 @@
     text-decoration: none;
 
     &:hover {
-      background: $header-background-alt-2;
+      background: $header-background-3;
       box-shadow: -1px 0 0 hsla(0, 0%, 0%, 0.1);
       color: #fff;
       position: relative;
@@ -48,7 +48,7 @@
   .previous_page,
   .next_page {
     font-weight: 600;
-    background: $header-background-alt-1;
+    background: $header-background-2;
   }
 
   .next_page {

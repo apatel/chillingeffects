@@ -4,7 +4,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 $base-padding: 35px;
-$left-margin: 200px;
+$base-padding-mobile: 20px;
 
 
 // New-Submission Form
@@ -23,9 +23,14 @@ $home-search-input-w: 500px;
 $home-search-input-h: 42px;
 $home-search-button-w: 70px;
 
-$header-background: #5E8FD5;
-$header-background-alt-1: #4F6D9B;
-$header-background-alt-2: #425E8A;
+$search-input-color: #4C6FBE;
+$search-button-bg: #72C97D;
+$search-button-width: 70px;
+$search-button-width-adv: 24px;
+
+$header-background-1: #5E8FD5;
+$header-background-2: #4F6D9B;
+$header-background-3: #425E8A;
 
 $blue: #477DCA;
 $dark-gray: #444;

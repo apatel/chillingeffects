@@ -1,5 +1,6 @@
 section.posts {
   @include span-columns(8);
+  margin-top: 10px;
 
   @include media($mobile) {
     float: none;
@@ -8,8 +9,15 @@ section.posts {
 }
 
 article.post-item {
-  margin-bottom: 30px;
-  margin: $base-padding $base-padding $base-padding + 10px;
+  margin: 45px $base-padding 75px 85px;
+
+  @include media($tablet) {
+    margin: 45px $base-padding 75px $base-padding;
+  }
+
+  @include media($tablet) {
+    margin: 45px $base-padding-mobile 75px $base-padding-mobile;
+  }
 
   h3 {
     font-weight: 800;
@@ -46,15 +54,19 @@ aside.sidebar {
   min-height: 300px;
   @include span-columns(4);
   @include pad(0 default);
-  margin-top: 33px;
+  @include omega;
+  margin-top: 33px + 20px;
 
   @include media($mobile) {
     float: none;
+    margin-top: 0;
+    padding: 0 $base-padding-mobile $base-padding-mobile;
     @include span-columns(4);
   }
 
   h4 {
     font-weight: bold;
+    color: $base-link-color;
   }
 
   ol {
@@ -64,8 +76,8 @@ aside.sidebar {
   li {
     border-bottom: 1px solid lighten($base-border-color, 5%);
     list-style: none;
-    margin-bottom: 0.6em;
-    padding-bottom: 0.6em;
+    margin-bottom: 0.9em;
+    padding-bottom: 0.9em;
 
     a {
       text-decoration: none;
@@ -76,5 +88,11 @@ aside.sidebar {
         text-decoration: underline;
       }
     }
+  }
+}
+
+body.blog_entries {
+  div.pagination {
+    clear: left;
   }
 }

@@ -22,8 +22,10 @@ header.app {
       margin: 0;
 
       img {
-        margin: 0 auto 15px;
+        margin: 10px auto 15px;
         display: block;
+        width: 80%;
+        height: 80%;
       }
     }
   }
@@ -37,22 +39,18 @@ header.app {
 
   .container {
     @extend %search-form;
-    background: $header-background;
-    clear: left;
+    background: $header-background-1;
+    clear: both;
     @include clearfix;
     padding: 12px;
 
     &.header-bar {
       border-radius: 4px 4px 0 0;
     }
-
-    @include media($small-screen) {
-      padding-left: 30px;
-    }
   }
 
-// Main Search input and buttons
-//************************************************************************//
+  // Main Search input and buttons
+  //************************************************************************//
   $input-height: 42px;
   .container .search-wrapper {
     position: relative;
@@ -60,30 +58,12 @@ header.app {
     margin: 0;
     width: 100%;
 
-    @include media($tablet) {
-      padding-left: 210px;
-      position: absolute;
-      right: 10px;
-      width: 100%;
-    }
-
-    @include media($mobile) {
-      padding: 0;
-      position: relative;
-      right: 0;
-    }
-
-    $input-color: #4C6FBE;
-    $button-bg: #72C97D;
-    $button-width: 70px;
-    $button-width-adv: 24px;
-    // $button-bg: #24CC96;
     div.input {
       @include icon(icon-search);
       position: relative;
 
       &:before {
-        color: $input-color;
+        color: $search-input-color;
         font-size: 22px;
         font-weight: 600;
         height: 20px;
@@ -102,28 +82,26 @@ header.app {
         font-weight: 600;
         height: $home-search-input-h;
         margin-bottom: 0;
-        padding-bottom: 6px;
-        padding-left: 50px;
-        padding-top: 6px;
+        padding: 6px ($search-button-width + $search-button-width-adv + 20px) 6px 50px;
         width: 100%;
 
         @include placeholder {
           font-weight: 500;
-          color: $input-color;
+          color: $search-input-color;
         }
       }
     }
 
     div.submit {
-      width: $button-width + $button-width-adv;
+      width: $search-button-width + $search-button-width-adv;
 
       .search-dropdown {
-        background: darken($button-bg, 5%);
+        background: darken($search-button-bg, 5%);
         @include border-right-radius(2px);
-        box-shadow: -1px 0 0 darken($button-bg, 8%);
+        box-shadow: -1px 0 0 darken($search-button-bg, 8%);
         float: left;
         height: $input-height;
-        width: $button-width-adv;
+        width: $search-button-width-adv;
 
         a.dropdown-toggle {
           display: block;
@@ -143,15 +121,14 @@ header.app {
       }
 
       button {
-        float: left;
-        height: $input-height;
-        font-size: 22px;
+        background: $search-button-bg;
         border: 0;
+        box-shadow: none;
+        float: left;
         font-size: 16px;
-        @include linear-gradient(#2868D1, #295EB8);
+        height: $input-height;
         text-shadow: none;
-        background: $button-bg;
-        width: $button-width;
+        width: $search-button-width;
 
         &:before {
           display: none;
@@ -172,6 +149,11 @@ header.app .container.advanced-search {
   margin: 0;
   text-align: left;
   padding: 12px $base-padding 24px $base-padding;
+
+  @include media($mobile) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 
   h5 {
     font-size: $base-font-size-small-1;

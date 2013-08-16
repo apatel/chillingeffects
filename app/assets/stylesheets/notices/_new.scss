@@ -2,8 +2,6 @@
 @import "datepicker";
 
 section.notice-new {
-  @extend %content-container;
-  box-shadow: 0 -3px 0 $shadow-1, $base-shadow;
   padding: $base-padding 0;
 
   section {

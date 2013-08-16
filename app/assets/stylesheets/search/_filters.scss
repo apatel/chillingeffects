@@ -13,7 +13,7 @@
 }
 
 ol.results-facets {
-  background: $header-background-alt-1;
+  background: $header-background-2;
   @include clearfix;
   margin: 0;
   padding: 0;
@@ -39,7 +39,7 @@ ol.results-facets {
 
     > li {
       float: none;
-      border-bottom: 1px solid $base-border-color;
+      border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
       border-right: 0;
 
       &:first-child {
@@ -76,13 +76,12 @@ ol.results-facets {
 
     &:hover,
     &.open a.dropdown-toggle {
-      background: $header-background-alt-2;
+      background: $header-background-3;
       box-shadow: -1px 0 0 hsla(0, 0%, 0%, 0.1);
       position: relative;
 
       @include media($tablet) {
         box-shadow: none;
-        background: #fff;
       }
     }
 
