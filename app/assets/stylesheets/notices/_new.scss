@@ -140,13 +140,12 @@ form.new_notice {
     padding: 45px 0 15px;
 
     input {
-      @include button(simple, #4383Ed);
       float: right;
       font-size: $base-font-size;
-      font-weight: 500;
+      font-weight: 800;
       margin-right: $base-padding;
       padding: 1em;
-      width: 46%;
+      width: 46%; //fallback
       width: calc(50% - #{$base-padding});
     }
   }

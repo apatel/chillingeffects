@@ -5,6 +5,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 $base-padding: 35px;
 $base-padding-mobile: 20px;
+$form-bg-padding: 12px;
 
 
 // New-Submission Form
@@ -19,7 +20,7 @@ $button-gradient-2: #2C68CD;
 $button-border: #2D61BA;
 
 $home-width: 750px;
-$home-search-input-w: 500px;
+$home-search-input-w: 600px - $form-bg-padding*2;
 $home-search-input-h: 42px;
 $home-search-button-w: 70px;
 
@@ -74,16 +75,15 @@ $base-border-color-2: #D1D3D8;
 $base-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 
 // Navigation
-$nav-hover: #1C7ED6;
+$nav-hover: #A379CE;
 $nav-hover-border: darken($nav-hover, 20%);
-$nav-bg: #3B4758;
+$nav-bg: $header-background-3;
 $nav-color: hsla(0, 0%, 100%, 0.75);
 
 // Box-shadow borders
 $shadow-1: #8793B1; // blueish gray
 $shadow-2: #1dbea2; // Blue - Blog
 $shadow-3: #80C761; // Green - Recent
-$shadow-4: #A379CE; // Orange
 
 // Flash Colors
 $error-color: $light-red;

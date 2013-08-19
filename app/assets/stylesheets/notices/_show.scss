@@ -323,21 +323,19 @@ section.attachments {
 //************************************************************************//
 article.notice-show {
   footer {
+    background: hsla(0, 0%, 0%, 0.05);
     @include clearfix;
-    margin: 0 $base-padding;
+    margin: 0;
     position: relative;
     top: -1px;
     z-index: 0;
-    background: hsla(0, 0%, 0%, 0.05);
-    box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1);
-    border-radius: 0 0 3px 3px;
 
     section {
       float: left;
       font-size: $base-font-size-small-1;
       min-height: 20px;
       @include span-columns(6);
-      @include pad(15px default);
+      padding: 15px $base-padding;
     }
 
     h6 {
