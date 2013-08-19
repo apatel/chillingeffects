@@ -17,11 +17,12 @@ section.home-search-form {
     text-align: center;
   }
 
+  $form-padding: $form-bg-padding - 3px;
   form {
     margin: 0 auto;
-    width: $home-search-input-w + ($form-bg-padding*2);
+    width: $home-search-input-w + ($form-padding*2);
     background: $header-background-1;
-    padding: 12px;
+    padding: $form-padding;
     border-radius: 4px;
 
     input#search {
@@ -30,8 +31,8 @@ section.home-search-form {
     }
 
     div.submit {
-      top: $form-bg-padding;
-      right: $form-bg-padding;
+      top: $form-padding;
+      right: $form-padding;
 
       button#submit {
         @include border-right-radius(2px);
