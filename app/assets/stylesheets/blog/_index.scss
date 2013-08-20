@@ -9,13 +9,13 @@ section.posts {
 }
 
 article.post-item {
-  margin: 45px $base-padding 75px 85px;
+  margin: 45px $base-padding 75px 65px;
 
   @include media($tablet) {
     margin: 45px $base-padding 75px $base-padding;
   }
 
-  @include media($tablet) {
+  @include media($mobile) {
     margin: 45px $base-padding-mobile 75px $base-padding-mobile;
   }
 
@@ -53,9 +53,13 @@ article.post-item {
 aside.sidebar {
   min-height: 300px;
   @include span-columns(4);
-  @include pad(0 default);
+  @include pad(0 65px 0 default);
   @include omega;
   margin-top: 33px + 20px;
+
+  @include media($tablet) {
+    @include pad(0 $base-padding 0 default);
+  }
 
   @include media($mobile) {
     float: none;
@@ -67,6 +71,7 @@ aside.sidebar {
   h4 {
     font-weight: bold;
     color: $base-link-color;
+    font-size: $base-font-size-1 + 1;
   }
 
   ol {

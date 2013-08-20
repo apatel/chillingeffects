@@ -12,7 +12,7 @@
     <%= form_tag(notices_search_index_path, method: :get) do %>
       <div class="container advanced-search">
         <div class="width-wrapper">
-          <h5><b>Advanced Search</b> &ndash; Add additional search queries</h5>
+          <h5>Advanced Search: <span>add additional search queries<span></h5>
           <% Notice::SEARCHABLE_FIELDS.each do |field| %>
             <%= render 'shared/advanced_field', field: field %>
           <% end %>

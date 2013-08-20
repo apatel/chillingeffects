@@ -8,14 +8,14 @@
 <div class="site-news">
   <section class="recent-notices">
     <h2>Recent Cease & Desists</h2>
-    <div id="recent-notices">
+    <ol id="recent-notices">
       <%= render @notices %>
-    </div>
+    </ol>
   </section>
   <section class="news-snippets">
     <h2>From the Blog</h2>
-    <div id="recent-blog-entries">
+    <ol id="recent-blog-entries">
       <%= render partial: 'blog_entry', collection: @blog_entries %>
-    </div>
+    </ol>
   </section >
 </div>

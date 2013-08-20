@@ -35,5 +35,12 @@ body.categories-show,
 body.high_voltage-pages {
   .main-inner {
     padding: $base-padding;
+
+    @include media($tablet) {
+    }
+
+    @include media($mobile) {
+      padding: $base-padding-mobile;
+    }
   }
 }

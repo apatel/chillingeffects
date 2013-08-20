@@ -85,8 +85,14 @@ section.home-search-form {
     }
   }
 
-  article {
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
     font-size: $base-font-size - 1px;
+    list-style: none;
     margin-bottom: 0.5em;
 
     a {
