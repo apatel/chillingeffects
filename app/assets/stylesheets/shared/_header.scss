@@ -3,7 +3,7 @@
 //************************************************************************//
 header.app {
   $padding: 20px;
-  background: hsla(0, 0%, 100%, 0.8);
+  background: $base-background-color-alt;
 
   h1 {
     display: block;
@@ -35,6 +35,10 @@ header.app {
     font-size: em(22, 15);
     font-weight: 800;
     margin: 0 0 0 (35px - 12px);
+
+    @include media($mobile) {
+      margin-left: 20px - 12px;
+    }
   }
 
   .container {

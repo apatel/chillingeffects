@@ -4,9 +4,16 @@
 section.notice-new {
   padding: $base-padding 0;
 
+  section, header {
+    padding: 45px $base-padding;
+
+    @include media($mobile) {
+      padding: 45px $base-padding-mobile;
+    }
+  }
+
   section {
     @include clearfix;
-    padding: 45px $base-padding;
 
     &:nth-of-type(2n) {
       border: 1px solid $light-gray;
@@ -31,8 +38,7 @@ section.notice-new {
   }
 
   header {
-    margin: 0 $base-padding;
-    margin-bottom: 45px;
+    padding-top: 0;
 
     h3 {
       margin: 10px 0;

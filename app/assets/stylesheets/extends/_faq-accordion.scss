@@ -50,13 +50,3 @@
     }
   }
 }
-
-%faq-page {
-  .answer {
-    @include media($mobile) {
-      $m: 20px;
-      margin-left: $m;
-      margin-right: $m;
-    }
-  }
-}
