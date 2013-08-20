@@ -75,6 +75,11 @@ section.category-faqs {
 
   h3.title {
     @extend %header-title;
+    font-size: $base-font-size-1;
+
+    @include media($mobile) {
+      margin-left: 0;
+    }
   }
 }
 

@@ -362,7 +362,7 @@ aside.notice {
   @include clearfix;
 
   @include media($mobile) {
-    padding: 1px 5px 0;
+    padding: 0 5px;
   }
 
   h4.title {
@@ -391,28 +391,17 @@ section#relevant-questions {
     float: none;
   }
 
-  article {
-    border-radius: 3px;
-    overflow: hidden;
-  }
 
-  div.question {
+  .question {
     font-size: $base-font-size;
-    @include transition(all 0.25s $ease-out-quad);
-    padding: 7px 20px;
 
-    &.open {
-      background: $header-background-1;
-
-      a {
-        color: #fff;
-      }
+    a {
+      padding: 7px 20px;
     }
   }
 
   .answer {
     padding: 20px;
-    box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.54);
 
     &, p {
       font-size: $base-font-size-small-1;
