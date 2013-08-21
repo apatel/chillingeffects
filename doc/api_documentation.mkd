@@ -33,6 +33,7 @@ below, which defines what attributes are remapped for each Notice Type.
 | `jurisidiction_list`               | string             | Comma separated list of jurisdictions, spaces are OK.
 | `works_attributes`                 | [Work]             | A list of Works
 | `entity_notice_roles_attributes`   | [EntityNoticeRole] | A list of EntityNoticeRoles
+| `file_uploads_attributes`          | [FileUpload]       | A list of FileUploads
 
 **Work**
 
@@ -78,6 +79,13 @@ below, which defines what attributes are remapped for each Notice Type.
 | `email`           | string |
 | `url`             | string |
 
+**FileUpload**
+
+| Field             | Type   | Description
+| ---               | ---    | ---
+| `kind`            | string | One of "original" or "supporting"
+| `file`            | string | A base64 encoded data-uri representing the file attachment
+
 ### Example Request
 
 ```
@@ -92,6 +100,16 @@ curl -H "Accept: application/json" -H "Content-type: application/json" 'http://f
     "category_ids": [19, 27],
     "tag_list": "movies, disney, youtube",
     "jurisidiction_list": "US, CA",
+    "file_uploads_attributes": [
+      {
+        "kind": "original",
+        "file": "data:text/plain;base64,dGVzdA=="
+      },
+      {
+        "kind": "supporting",
+        "file": "data:text/plain;base64,QmUgc3VyZSB0byBkcmluayB5b3VyIG92YWx0aW5l\n"
+      },
+    ],
     "works_attributes": [
       {
         "description": "Lion King Video",
