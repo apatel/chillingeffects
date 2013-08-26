@@ -8,4 +8,11 @@ namespace :chillingeffects do
     sleep 5
   end
 
+  desc "Import legacy chillingeffects data"
+  task import_legacy_data: :environment do
+    if ENV['FILE_NAME'].blank?
+      puts "Please specify the file name via the FILE_NAME environment variable"
+    end
+  end
+
 end
