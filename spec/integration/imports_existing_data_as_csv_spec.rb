@@ -9,5 +9,7 @@ feature "Importing CSV" do
     notice = Dmca.last
     expect(notice.title).to eq 'Music DMCA (Copyright) Complaint to Google'
     expect(notice.original_notice_id).to eq 342342
+
+    expect(notice.works.length).to eq 2
   end
 end

@@ -21,7 +21,7 @@ describe Ingestor::LegacyCsv do
   it "returns enumerable parsed rows" do
     ingestor = open_valid_file
     row = ingestor.first
-    expect(row).to have_key('NoticeID').with_value('3168232342342')
+    expect(row).to have_key('NoticeID').with_value('342342')
   end
 
   def open_valid_file

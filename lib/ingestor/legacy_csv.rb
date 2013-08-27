@@ -34,7 +34,7 @@ module Ingestor
     def each(&block)
       init_headers
       @lines.each do |line|
-        yield CSV.parse_line(line, col_sep: COL_SEP, headers: @headers)
+        yield CSV.parse_line(line.force_encoding('UTF-8'), col_sep: COL_SEP, headers: @headers, row_sep: "\n")
       end
     end
   end
