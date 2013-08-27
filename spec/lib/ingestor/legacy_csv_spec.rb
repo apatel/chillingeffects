@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'ingestor/legacy_csv'
+require 'ingestor'
 
 describe Ingestor::LegacyCsv do
   include IngestorHelpers

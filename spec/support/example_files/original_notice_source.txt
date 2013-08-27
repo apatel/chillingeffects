@@ -1,0 +1,32 @@
+field_form_version:1
+field_location_or_region:US
+field_submitter_first_name:Joe
+field_submitter_last_name:Schmoe
+field_submitter_company:FooCorp
+field_copyright_owner:Copyright Owner LLC
+field_group_0_work_description:Video and Image series produced by Copyright Owner LLC.
+
+field_group_0_copyright_work_url_0:http://example.com/original_work_url
+field_group_0_infringement_url_0:http://infringing.example.com/url_0
+field_group_0_infringement_url_1:http://infringing.example.com/url_1
+field_group_0_infringement_url_2:http://infringing.example.com/url_2
+field_group_0_infringement_url_3:http://infringing.example.com/url_3
+field_group_0_infringement_url_4:http://infringing.example.com/url_4
+field_group_0_infringement_url_5:http://infringing.example.com/url_5
+field_group_0_infringement_url_6:http://infringing.example.com/url_6
+field_group_0_infringement_url_7:http://infringing.example.com/url_7
+field_group_0_infringement_url_8:http://infringing.example.com/url_8
+field_group_1_work_description:Video and Image series produced by Copyright Owner LLC.
+
+field_group_1_copyright_work_url_0:http://example.com/original_work_url
+field_group_1_infringement_url_0:http://infringing.example.com/url_second_0
+field_group_1_infringement_url_1:http://infringing.example.com/url_second_1
+field_group_1_infringement_url_2:http://infringing.example.com/url_second_2
+field_group_1_infringement_url_3:http://infringing.example.com/url_second_3
+field_group_1_infringement_url_4:http://infringing.example.com/url_second_4
+field_group_1_infringement_url_5:http://infringing.example.com/url_second_5
+field_group_1_infringement_url_6:http://infringing.example.com/url_second_6
+field_group_1_infringement_url_7:http://infringing.example.com/url_second_7
+field_group_1_infringement_url_8:http://infringing.example.com/url_second_8
+field_signature: Trusted user submission
+field_form_submission_time:05/26/2013 PDT

@@ -23,6 +23,14 @@ module Ingestor
       @headers ||= CSV.parse_line(@lines.first, col_sep: COL_SEP)
     end
 
+    def import
+      self.each do |csv_row|
+        Dmca.create!(
+          AttributeMapper.transform(csv_row)
+        )
+      end
+    end
+
     def each(&block)
       init_headers
       @lines.each do |line|
@@ -32,6 +40,27 @@ module Ingestor
   end
 
   private
+
+  class AttributeMapper
+    def self.transform(csv_row)
+      hash = csv_row.to_hash
+      {
+        original_notice_id: hash['NoticeID'],
+        title: hash['Subject'],
+        works: Ingestor::WorksImporter.import(hash['OriginalFilePath']),
+        entity_notice_roles: [
+          EntityNoticeRole.new(
+            name: 'sender',
+            entity: Entity.new(name: hash['Sender_Principal'])
+          ),
+          EntityNoticeRole.new(
+            name: 'recipient',
+            entity: Entity.new(name: hash['Recipient_Entity'])
+          ),
+        ]
+      }
+    end
+  end
 
   class FileOpener
     def self.open(file_name)
