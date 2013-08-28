@@ -3,7 +3,9 @@ require 'ingestor'
 
 feature "Importing CSV" do
   scenario "notices are created" do
-    ingestor = Ingestor::LegacyCsv.open('spec/support/example_files/example_notice_export.csv.gz')
+    ingestor = Ingestor::LegacyCsv.open(
+      'spec/support/example_files/example_notice_export.csv.gz'
+    )
     ingestor.import
 
     notice = Dmca.last
