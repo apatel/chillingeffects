@@ -18,18 +18,11 @@ describe Ingestor::LegacyCsv do
     end
   end
 
-  it "returns enumerable parsed rows" do
-    ingestor = open_valid_file
-    row = ingestor.first
-    expect(row).to have_key('NoticeID').with_value('342342')
-  end
-
-  def open_valid_file
-    open_file('spec/support/example_files/example_notice_export.csv.gz')
-  end
-
-  def open_file(file)
-    described_class.open(file)
+  it "is enumerable" do
+    ingestor = described_class.open(
+      'spec/support/example_files/example_notice_export.csv.gz'
+    )
+    expect(ingestor).to respond_to(:each)
   end
 
 end

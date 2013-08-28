@@ -47,7 +47,7 @@ module Ingestor
       {
         original_notice_id: hash['NoticeID'],
         title: hash['Subject'],
-        works: Ingestor::WorksImporter.import(hash['OriginalFilePath']),
+        works: Ingestor::WorksImporter.create_instances(hash['OriginalFilePath']),
         entity_notice_roles: [
           EntityNoticeRole.new(
             name: 'sender',
