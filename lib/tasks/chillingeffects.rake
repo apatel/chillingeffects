@@ -213,7 +213,7 @@ namespace :chillingeffects do
 
   begin
     google_notices = Array.new
-    Notice.all.collect{|n| n.recipient.name.include?("Google") ? google_notices << n : ''}
+    Notice.all.collect{|n| n.recipient.name.include?("Google") && (!n.action_taken.blank? || !n.action_taken.nil?) ? google_notices << n : ''}
     p = ProgressBar.create(
       title: "Reassigning",
       total: google_notices.count,
